@@ -6,7 +6,6 @@ int yyerror(char *s);
 %}
 
 %%
-
 [a-z]   {
             yylval = *yytext - 'a';
             return VARIABLE;
@@ -21,12 +20,28 @@ int yyerror(char *s);
             return *yytext;
         }
 
+        
+0x[0-9a-fA-F]+  {
+                    yylval = (int)strtol(yytext, NULL, 0);
+                    return INTEGER;
+                }
+                
 ":="    return ASSIGN;
 "+"     return PLUS;
 "*"     return TIMES;
 "-"     return MINUS;
 "/"     return DIVIDE;
 "%"     return MODULO;
+"<"     return SMALLER;
+"<="    return SMALLER_EQUAL;
+"=="    return EQUAL;
+"!="    return NOT_EQUAL;
+">="    return BIGGER_EQUAL;
+">"     return BIGGER;
+"?"     return CONDITION;
+":"     return OPERATOR;
+"min"   return MIN;
+"max"   return MAX;
 
 "\n"    return NEWLINE;
 

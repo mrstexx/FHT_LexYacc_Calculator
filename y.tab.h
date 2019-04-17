@@ -49,11 +49,22 @@ extern int yydebug;
     ASSIGN = 259,
     INTEGER = 260,
     NEWLINE = 261,
-    PLUS = 262,
-    MINUS = 263,
-    TIMES = 264,
-    DIVIDE = 265,
-    MODULO = 266
+    SMALLER = 262,
+    SMALLER_EQUAL = 263,
+    EQUAL = 264,
+    NOT_EQUAL = 265,
+    BIGGER_EQUAL = 266,
+    BIGGER = 267,
+    CONDITION = 268,
+    OPERATOR = 269,
+    MINUS = 270,
+    PLUS = 271,
+    TIMES = 272,
+    DIVIDE = 273,
+    MODULO = 274,
+    MIN = 275,
+    MAX = 276,
+    UNARY_MINUS = 277
   };
 #endif
 /* Tokens.  */
@@ -61,11 +72,22 @@ extern int yydebug;
 #define ASSIGN 259
 #define INTEGER 260
 #define NEWLINE 261
-#define PLUS 262
-#define MINUS 263
-#define TIMES 264
-#define DIVIDE 265
-#define MODULO 266
+#define SMALLER 262
+#define SMALLER_EQUAL 263
+#define EQUAL 264
+#define NOT_EQUAL 265
+#define BIGGER_EQUAL 266
+#define BIGGER 267
+#define CONDITION 268
+#define OPERATOR 269
+#define MINUS 270
+#define PLUS 271
+#define TIMES 272
+#define DIVIDE 273
+#define MODULO 274
+#define MIN 275
+#define MAX 276
+#define UNARY_MINUS 277
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
