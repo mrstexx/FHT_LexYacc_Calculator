@@ -1,5 +1,5 @@
 %{
-extern int yylval; 
+extern int yylval;
 extern int sym[];
 int yyerror(char *s);
 #include "y.tab.h"
@@ -11,7 +11,7 @@ int yyerror(char *s);
             return VARIABLE;
         }
 
-[0-9]+  {  
+[0-9]+  {
             yylval = atoi(yytext);
             return INTEGER;
         }
@@ -20,12 +20,12 @@ int yyerror(char *s);
             return *yytext;
         }
 
-        
+
 0x[0-9a-fA-F]+  {
                     yylval = (int)strtol(yytext, NULL, 0);
                     return INTEGER;
                 }
-                
+
 ":="    return ASSIGN;
 "+"     return PLUS;
 "*"     return TIMES;
