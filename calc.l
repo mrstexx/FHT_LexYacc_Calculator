@@ -16,13 +16,8 @@ int yyerror(char *s);
             return INTEGER;
         }
 
-[()]    {
-            return *yytext;
-        }
-
-
 0x[0-9a-fA-F]+  {
-                    yylval = (int)strtol(yytext, NULL, 0);
+                    yylval = (int)strtol(yytext, NULL, 0); // 0 because string starts with 0x
                     return INTEGER;
                 }
 
@@ -40,8 +35,11 @@ int yyerror(char *s);
 ">"     return BIGGER;
 "?"     return CONDITION;
 ":"     return OPERATOR;
+"("     return OPEN_BRACES;
+")"     return CLOSE_BRACES;
 "min"   return MIN;
 "max"   return MAX;
+","     return COMMA;
 
 "\n"    return NEWLINE;
 

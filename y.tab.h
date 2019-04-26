@@ -49,22 +49,24 @@ extern int yydebug;
     ASSIGN = 259,
     INTEGER = 260,
     NEWLINE = 261,
-    SMALLER = 262,
-    SMALLER_EQUAL = 263,
-    EQUAL = 264,
-    NOT_EQUAL = 265,
-    BIGGER_EQUAL = 266,
-    BIGGER = 267,
-    CONDITION = 268,
-    OPERATOR = 269,
-    MINUS = 270,
-    PLUS = 271,
-    TIMES = 272,
-    DIVIDE = 273,
-    MODULO = 274,
-    MIN = 275,
-    MAX = 276,
-    UNARY_MINUS = 277
+    COMMA = 262,
+    SMALLER = 263,
+    SMALLER_EQUAL = 264,
+    EQUAL = 265,
+    NOT_EQUAL = 266,
+    BIGGER_EQUAL = 267,
+    BIGGER = 268,
+    CONDITION = 269,
+    OPERATOR = 270,
+    MINUS = 271,
+    PLUS = 272,
+    TIMES = 273,
+    DIVIDE = 274,
+    MODULO = 275,
+    OPEN_BRACES = 276,
+    CLOSE_BRACES = 277,
+    MIN = 278,
+    MAX = 279
   };
 #endif
 /* Tokens.  */
@@ -72,22 +74,24 @@ extern int yydebug;
 #define ASSIGN 259
 #define INTEGER 260
 #define NEWLINE 261
-#define SMALLER 262
-#define SMALLER_EQUAL 263
-#define EQUAL 264
-#define NOT_EQUAL 265
-#define BIGGER_EQUAL 266
-#define BIGGER 267
-#define CONDITION 268
-#define OPERATOR 269
-#define MINUS 270
-#define PLUS 271
-#define TIMES 272
-#define DIVIDE 273
-#define MODULO 274
-#define MIN 275
-#define MAX 276
-#define UNARY_MINUS 277
+#define COMMA 262
+#define SMALLER 263
+#define SMALLER_EQUAL 264
+#define EQUAL 265
+#define NOT_EQUAL 266
+#define BIGGER_EQUAL 267
+#define BIGGER 268
+#define CONDITION 269
+#define OPERATOR 270
+#define MINUS 271
+#define PLUS 272
+#define TIMES 273
+#define DIVIDE 274
+#define MODULO 275
+#define OPEN_BRACES 276
+#define CLOSE_BRACES 277
+#define MIN 278
+#define MAX 279
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
