@@ -40,6 +40,8 @@ int yyerror(char *s);
 "min"   return MIN;
 "max"   return MAX;
 ","     return COMMA;
+"min()" yyerror("Fehler!");
+"max()" yyerror("Fehler!");
 
 "\n"    return NEWLINE;
 

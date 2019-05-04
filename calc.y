@@ -29,7 +29,11 @@ expr: INTEGER                         { $$ = $1; }
       | expr PLUS expr                { $$ = $1 + $3; }
       | expr TIMES expr               { $$ = $1 * $3; }
       | expr MINUS expr               { $$ = $1 - $3; }
-      | expr DIVIDE expr              { if ($3 == 0) yyerror("Cannot divide by zero!"); else $$ = $1 / $3; }
+      | expr DIVIDE expr              { if ($3 == 0) {
+                                          $$ = yyerror("Cannot divide by zero!");
+                                        } else
+                                          $$ = $1 / $3;
+                                      }
       | expr MODULO expr              { $$ = $1 % $3; }
       | PLUS expr                     { $$ = $2; }
       | MINUS expr                    { $$ = -$2; }
